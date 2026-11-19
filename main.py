@@ -1,23 +1,31 @@
 #!/usr/bin/env python3
-"""Entry for make.fun's "Sum up 18 November's world news in one image".
+"""Publish the 18 November 2026 front page for the make.fun bounty.
 
-The repository holds the finished front page as entry.png; this program
-copies it, byte for byte, to the output directory the harness names
-($MAKEFUN_OUTPUT_DIR, or /output inside the grader's container). No
-network, no clock, no randomness: two runs write identical bytes.
+``entry.png`` beside this file is the finished page. Executing the
+program copies those exact bytes into the directory named by the
+``MAKEFUN_OUTPUT_DIR`` environment variable (``/output`` when the
+variable is absent). Nothing is fetched, generated or randomised at
+run time, which is why two executions always produce the same file.
 """
 
 import os
 import shutil
 from pathlib import Path
 
-SOURCE = Path(__file__).resolve().with_name("entry.png")
+FRONT_PAGE = Path(__file__).resolve().parent / "entry.png"
+
+
+def destination() -> Path:
+    raw = os.getenv("MAKEFUN_OUTPUT_DIR")
+    return Path(raw) if raw else Path("/output")
 
 
 def main() -> None:
-    out_dir = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"))
-    out_dir.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(SOURCE, out_dir / "entry.png")
+    if not FRONT_PAGE.exists():
+        raise SystemExit("entry.png not found next to main.py")
+    target = destination()
+    target.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(FRONT_PAGE, target / "entry.png")
 
 
 if __name__ == "__main__":

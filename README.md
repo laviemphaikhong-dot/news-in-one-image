@@ -1,43 +1,66 @@
-# The world of 18 November 2026, in one image
+# Wednesday 18 November 2026 — one day of world news, one page
 
 [![make.fun](https://make.fun/badge/news-image-20261118.svg)](https://make.fun/bounty/news-image-20261118)
 [![rank](https://make.fun/badge/news-image-20261118/laviemphaikhong-dot/news-in-one-image/rank.svg)](https://make.fun/bounty/news-image-20261118)
 [![reward](https://make.fun/badge/news-image-20261118/laviemphaikhong-dot/news-in-one-image/reward.svg)](https://make.fun/bounty/news-image-20261118)
 
-Entry for the make.fun bounty [Sum up 18 November's world news in one image](https://make.fun/bounty/news-image-20261118).
+Entry for make.fun's [Sum up 18 November's world news in one image](https://make.fun/bounty/news-image-20261118).
 
-`entry.png` is a one-page broadsheet that sums up Wednesday 18 November
-2026: a masthead naming the day, a lead story with a schematic map, and
-panels for the day's other big stories, each drawn as a small flat
-illustration with a headline and a one-line summary.
+The page is a broadsheet carrying **46 stories from 7 regions, each
+one verified against reporting dated Wednesday 18 November 2026**:
+a UTC timeline of the day, four lead stories, a grid of twelve,
+a dotted world map of where the day happened, thirty one-line stories
+in an "Also on Wednesday" column, and a date-check box that names the
+big stories deliberately excluded for belonging to other days.
 
-- **Lead** — U.S. jets strike a Revolutionary Guards missile site on
-  Qeshm Island; Iran answers with drones and missiles against U.S.
-  bases in Bahrain and Kuwait (map of the Strait of Hormuz).
-- **Diplomacy** — Xi Jinping and Vladimir Putin open the APEC summit in
-  Shenzhen, assailing sanctions and protectionism, a day before a
-  three-way meeting with President Trump.
-- **U.S. politics** — Mary Peltola wins Alaska; Democrats take the
-  Senate 56–44, the biggest midterm flip since 1958.
-- **Ukraine war** — a Ukrainian strike partially collapses the Crimea
-  Bridge; a Russian warship is damaged in the Gulf of Finland.
-- **Health** — the United States loses its measles elimination status
-  after 26 years (5,412 cases, 10 deaths); Congo's Ebola outbreak
-  passes 11,000 cases, the second-largest on record.
-- **Space** — Voyager 1 becomes the first human-made object one
-  light-day from Earth, 16 billion miles out.
-- **Russia** — a military plane crashes in Siberia, killing all 19
-  aboard.
-- **Ticker** — markets slide (DAX −2.1%, FTSE −1.8%, CAC −1.6%); cold
-  kills displaced families in Gaza's tents; Cambridge Dictionary's word
-  of the year is "Human".
+## The leads
 
-## Run
+1. **Iran answers Qeshm** — Iranian drones strike Patriot batteries
+   at Kuwait's Ali Al-Salem air base before dawn; Bahrain intercepts
+   several attacks and issues two shelter alerts, a day after the
+   U.S. strike on Qeshm Island.
+2. **Shenzhen arrivals** — Xi Jinping greets Donald Trump on the
+   airport tarmac, a first for a visiting leader in decades, and
+   holds talks with Vladimir Putin; the three pose for the APEC
+   family photo ahead of Thursday's trilateral summit.
+3. **The Crimea Bridge, again** — a third attack this week closes
+   the Kerch crossing for damage checks; rail traffic resumes, the
+   road span downed on Tuesday stays shut, and two deaths are
+   confirmed.
+4. **Markets slide** — hawkish Fed minutes knock gold down 3.2% to
+   $3,741.90 and lift the dollar to a 19-month high; the Dow closes
+   −1.11% at 50,198 and oil falls 3.2%.
+
+## In the grid
+
+Voyager 1 crossing one light-day from Earth · a record $190.4m
+Van Gogh at Sotheby's · Hakeem Jeffries nominated for Speaker ·
+the EU's €45bn Ukraine loan · Anthropic pricing its IPO at $83 ·
+COP31's ministerial endgame · Peltola sealing a 56–44 Senate ·
+a record 1,441-drone night over Ukraine · the UN's Ebola appeal ·
+Cyclone Akvan · the Quad in Manila · Britain's missile pledge.
+
+## Checked, and left out
+
+Thursday's stories (the GTA VI launch, the trilateral summit
+itself, Nvidia's results, the World Court's Myanmar judgment),
+Tuesday's (the Qeshm strike, the measles ruling, the bridge span
+collapse, the Siberia crash) and Monday's COP31 draft were all
+verified and excluded — they are not Wednesday's news.
+
+## Running it
 
 ```sh
 python3 main.py
 ```
 
-`main.py` copies `entry.png` to `$MAKEFUN_OUTPUT_DIR/entry.png` (or
-`/output/entry.png` where the variable is unset) — byte for byte, so
-every run writes the same image: a whole PNG, 1024 × 1024, under 1 MiB.
+The command copies `entry.png` into `$MAKEFUN_OUTPUT_DIR` (or
+`/output` if unset), byte for byte: a single 1024 × 1024 PNG,
+comfortably under the 1 MiB cap, identical on every run.
+
+## About the artwork
+
+No photographs are used. The page — masthead, rules, region-coloured
+labels, the dotted world map and its story markers — is typeset and
+drawn entirely in code, then rendered once to the PNG that ships
+here.
