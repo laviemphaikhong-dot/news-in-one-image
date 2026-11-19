@@ -8,10 +8,12 @@ Entry for make.fun's [Sum up 18 November's world news in one image](https://make
 
 The page is a broadsheet carrying **46 stories from 7 regions, each
 one verified against reporting dated Wednesday 18 November 2026**:
-a UTC timeline of the day, four lead stories, a grid of twelve,
-a dotted world map of where the day happened, thirty one-line stories
-in an "Also on Wednesday" column, and a date-check box that names the
-big stories deliberately excluded for belonging to other days.
+a UTC timeline and the day in numbers, sixteen numbered lead
+stories — four large, twelve in a grid — pinned by number on a
+dotted world map of where the day happened, region counts for all
+46 stories, thirty one-line stories in an "Also on Wednesday"
+column, and a date-check box that names the big stories
+deliberately excluded for belonging to other days.
 
 ## The leads
 
